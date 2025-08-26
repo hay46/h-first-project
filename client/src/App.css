@@ -65,20 +65,18 @@
   font-size: 20px;
   font-weight: 600;
 }
-
-/* Rooms section */
 .our-comfortabl-rooms {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 100vh;
   padding: 40px 20px;
   background: linear-gradient(135deg, #f0f8ff, #e6ffe6);
 }
-
-.our-comfortabl-rooms.our-comfortabl-rooms-suites {
+ .our-comfortabl-rooms.our-comfortabl-rooms-suites {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 20px;
   padding: 25px;
@@ -86,7 +84,7 @@
   background-color: #ffffff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
-} 
+}  
 
 .our-comfortabl-rooms-suites:hover {
   transform: scale(1.05);
@@ -118,8 +116,7 @@
   }
 
   .web-development,
-  .on-timet,
-  .our-comfortabl-rooms-suites {
+  .on-timet{
     flex-direction: row;
     width: 100%;
     margin: 10px 0;
@@ -136,5 +133,125 @@
 
   .Executive-Studio {
     gap: 15px;
+    flex-direction: row;
+  }
+}
+/* 💻 Switch to row layout on screens wider than 720px */
+@media (min-width: 720px) {
+  .our-comfortabl-rooms-suites  {
+    flex-direction: row;
+    align-items: flex-start; /* optional: adjust vertical alignment */
+    justify-content: space-around; /* optional: tweak spacing */
+  }
+}
+@media (min-width: 1024px) {
+  .our-comfortabl-rooms {
+    padding: 60px;
+    gap: 40px;
+  }
+}
+/* 🌐 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 🌄 Header Section */
+.alemu {
+  background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alemu h1 {
+  font-size: 2.5rem;
+  color: #2e3c5d;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.alemu button {
+  background-color: #2e3c5d;
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.alemu button:hover {
+  background-color: #1c2a45;
+  transform: scale(1.05);
+}
+
+/* 💬 Testimonials Section */
+.As-a-frequent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* 🧾 Individual Service Card */
+.As-a-frequent .Service {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.As-a-frequent .Service:hover {
+  transform: translateY(-5px);
+}
+
+/* 🌟 Rating */
+.As-a-frequent .Service [id] {
+  font-size: 1.2rem;
+  color: #ff9800;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* 📝 Review Text */
+.As-a-frequent .Service [para] {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* 🖋️ Reviewer Name */
+.As-a-frequent .Service [read] {
+  font-size: 0.9rem;
+  color: #607d8b;
+  font-style: italic;
+  text-align: right;
+  display: block;
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 600px) {
+  .alemu h1 {
+    font-size: 2rem;
+  }
+
+  .alemu button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .As-a-frequent {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
   }
 }

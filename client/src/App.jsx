@@ -2,6 +2,12 @@ import React from "react";
 import "./App.css";
 import Header from "./componenet/header/Header";
 import Home from "./componenet/home/Home";
+import Photo from "./componenet/home/photo/Photo";
+import Service from "./componenet/home/photo/Service"
+import Contact from "./componenet/home/photo/Contact";
+import Please from "./componenet/home/photo/Please/"
+import Input from "./componenet/home/photo/Input/"
+import Footer from "./componenet/footer/Footer";
 function App() {
   return (
     <div>
@@ -87,9 +93,39 @@ function App() {
           />
         </div>
       </div>
-      <div className="view-all">
-        <button>view all Rooms & Book</button>
+      <Photo />
+      <div className="alemu">
+        <button>Explore LodgeLink & Book Your Stay</button>
+        <h1>What Our Guests Say</h1>
       </div>
+      <div className="As-a-frequent">
+        <Service
+          id="★★★★☆"
+          para="As a frequent traveler to Dessie, LodgeLink has become my go-to. The quiet ambiance, delicious local food, and convenient airport pickup service make it stand out. Ethiopian hospitality at its best!"
+          read="-pro.elishaday.Z"
+        />
+        <Service
+          id="★★★★★"
+          para="LodgeLink dessie exceeded all my expectations! The rooms were incredibly clean and comfortable, and the staff were exceptionally friendly and helpful. A truly peaceful stay near Lake Tana."
+          read="-Dr.abebe.F"
+        />
+        <Service
+          id="★★★★☆"
+          para="Our family had a wonderful time. The service was impeccable, and they went above and beyond to ensure our kids were comfortable. Highly recommend LodgeLink for a memorable trip."
+          read="-Mr.alemayew.W"
+        />
+        <div className="Great-value">
+          <Service
+            id="★★★★☆"
+            para="Great value for money! The location is perfect for exploring Bahir Dar, and the free Wi-Fi was a lifesaver. I particularly enjoyed the breakfast and the beautiful garden."
+            read="-pro.Mesifin.E"
+          />
+        </div>
+      </div>
+      <Contact />
+      <Please />
+      <Input />
+      <Footer />
     </div>
   );
 }
