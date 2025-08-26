@@ -11,7 +11,7 @@
   background: linear-gradient(135deg, #263238, #37474f);
   color: #f5f5f5;
   padding: 50px 30px;
-  border-top: 5px solid #00c853;
+  border-top: 4px solid #00c853;
 }
 
 /* 🧭 Section Titles */
@@ -26,7 +26,7 @@
 .LodgeLink-dessie p {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   color: #cfd8dc;
 }
 
