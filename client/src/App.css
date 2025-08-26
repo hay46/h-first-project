@@ -1,0 +1,140 @@
+/* Reset and base styles*/
+/* /* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container */
+.abebe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e6ffe6, #f0f8ff);
+}
+
+/* Section cards */
+.web-development,
+.on-timet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.web-development:hover,
+.on-timet:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Comfort section */
+.our-comfortabl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.our-comfortabl h1 {
+  color: #222;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.our-comfortabl p {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Rooms section */
+.our-comfortabl-rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f0f8ff, #e6ffe6);
+}
+
+.our-comfortabl-rooms.our-comfortabl-rooms-suites {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+} 
+
+.our-comfortabl-rooms-suites:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Executive Studio layout */
+.Executive-Studio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+} 
+.view-all button{
+    align-items: center;
+    color: rgb(17, 23, 23);
+    font-size: 50px;
+    background-color: aqua;
+
+}
+.view-all button:hover{
+  background-color: rgba(104, 252, 5, 0.957);
+  color: #f9f9f9;
+}
+/* 📱 Responsive Design */
+@media (min-width: 768px) {
+  .abebe,
+  .our-comfortabl-rooms {
+    padding: 30px 20px;
+  }
+
+  .web-development,
+  .on-timet,
+  .our-comfortabl-rooms-suites {
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+  }
+
+  .our-comfortabl h1 {
+    font-size: 36px;
+  }
+
+  .our-comfortabl p {
+    font-size: 18px;
+  }
+
+  .Executive-Studio {
+    gap: 15px;
+  }
+}

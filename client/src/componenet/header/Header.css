@@ -1,0 +1,179 @@
+/* ---------------- Header ---------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #030d21, #1e3a8a); /* Gradient for a modern look */
+  color: white;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-right: 200px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #60a5fa; /* Light blue hover */
+}
+
+/* ---------------- Nav Links ---------------- */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  position: relative;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #60a5fa; /* Blue underline animation */
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #93c5fd;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------------- Buttons ---------------- */
+.nav a.whatsApp {
+  background: linear-gradient(135deg, #1da851, #128c3c);
+  border-radius: 30px;
+  padding: 12px 24px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.nav a.whatsApp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(29, 168, 81, 0.5);
+}
+
+.nav a.booknow {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  border-radius: 30px;
+  padding: 12px 24px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.nav a.booknow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.5);
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero-section {
+  background-image:url(../../assets/gallary3.jpg) ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 530px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-section h2 {
+  font-size: 1.5rem;
+  background-color: #1d4ed8;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-section h2:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+/* ---------------- Hero Page ---------------- */
+.hero-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 30px;
+  padding: 40px 20px;
+}
+
+.hero-page h1 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero-page p {
+  margin: 10px 90px;
+  font-size: 1.2rem;
+  color: #1f2937;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 32px;
+    background-color: #1f2937;
+    padding: 16px;
+    display: none;
+    border-radius: 10px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .whatsApp,
+  .booknow {
+    display: none;
+  }
+}
