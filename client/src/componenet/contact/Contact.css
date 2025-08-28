@@ -1,0 +1,101 @@
+/* 🏨 Booking Section */
+.Book-your-room {
+  background: linear-gradient(135deg, #0b22ec, #ffe0b2);
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.Book-your-room h1 {
+  font-size: 2.4rem;
+  color: #4e342e;
+  margin-bottom: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* 📞 Button Container */
+.whatsapp-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 🟢 WhatsApp Button */
+.WhatsApp {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.WhatsApp:hover {
+  background-color: #128c7e;
+  transform: scale(1.05);
+}
+
+/* 🔵 Call Button */
+.Call {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Call:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* 🟣 Check Availability Button */
+.Check {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Check:hover {
+  background-color: #6a1b9a;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+  .Book-your-room h1 {
+    font-size: 1.8rem;
+  }
+
+  .whatsapp-us {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .whatsapp-us button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+

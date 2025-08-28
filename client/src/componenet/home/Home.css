@@ -1,32 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.my-home {
-  width: 320px;
-  height: 520px;
-  padding: 30px;
-  margin: 30px auto;
+/* ============ HOME FEATURE CARDS ============ */
+.home-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  color: #1887e7;
-  background: linear-gradient(135deg, #f0f4ff, #e6f0ff);
-  border: 4px solid #4d0be8;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s ease;
+  justify-content: space-between;
 }
 
-.my-home:hover {
-  background: linear-gradient(135deg, #0077ff, #0055cc);
-  color: #f8ef04;
-  padding: 50px;
-  transform: scale(1.05);
-  cursor: pointer;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+.home-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f0c040;
+}
+
+.home-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #030d21;
+}
+
+.home-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  display: inline-block;
+  color: #f0c040;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #030d21;
+}
+
+/* ============ GRID LAYOUT (use inside sections) ============ */
+.features-grid,
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }

@@ -1,0 +1,37 @@
+/* ================= ROOMS SECTION ================= */
+.rooms-section {
+  background: #f0f4ff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.rooms-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.rooms-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.rooms-grid .card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rooms-grid .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
