@@ -1,10 +1,24 @@
 import React from "react";
 import Slider from "react-slick";
-import Service from "./ServiceCard"; // renamed the card file for clarity
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Service.css";
+import "./TestimonialsWrapper.css";
 
+// ====== Home Card (single card) ======
+function Home({ id, title, para, read }) {
+  return (
+    <div className="home-card">
+      <div className="card-icon">{id}</div>
+      <h2 className="card-title">{title}</h2>
+      <p className="card-para">{para}</p>
+      <a href="/" className="read-more">
+        {read} →
+      </a>
+    </div>
+  );
+}
+
+// ====== Service Section (slider/testimonials) ======
 function ServiceSection() {
   const testimonials = [
     {
@@ -47,14 +61,23 @@ function ServiceSection() {
 
   return (
     <div className="testimonials-section">
-      <h1>What Our Guests Say</h1>
+      <h1 className="section-title">What Our Guests Say</h1>
       <Slider {...settings}>
         {testimonials.map((t, i) => (
-          <Service key={i} id={t.id} para={t.para} read={t.read} />
+          <Home key={i} id={t.id} para={t.para} read={t.read} />
         ))}
       </Slider>
     </div>
   );
 }
 
-export default ServiceSection;
+// ====== Wrapper Component ======
+function TestimonialsWrapper() {
+  return (
+    <div className="wrapper-container">
+      <ServiceSection />
+    </div>
+  );
+}
+
+export default TestimonialsWrapper;

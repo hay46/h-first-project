@@ -1,12 +1,12 @@
 import React from "react";
-import "./Contact.css"; // optional if you want custom styles
+import "./Contact.css";
 
 function Contact() {
   return (
     <section className="contact-section" id="contact">
-      <h2 className="section-title">Contact Us</h2>
+      <h2 className="section-title">Contact & Booking</h2>
       <p className="section-subtitle">
-        Have questions or want to book your stay? We’d love to hear from you!
+        Have questions or want to reserve your room? Send us a message!
       </p>
 
       <div className="contact-grid">
@@ -28,22 +28,29 @@ function Contact() {
           </div>
         </div>
 
-        {/* Contact Form */}
+        {/* Contact / Booking Form */}
         <form className="contact-form">
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
+          <input type="text" placeholder="Phone Number" required />
+          <select required>
+            <option value="">Select Room Type</option>
+            <option value="deluxe">Deluxe Room</option>
+            <option value="standard">Standard Room</option>
+            <option value="family">Family Suite</option>
+          </select>
           <textarea placeholder="Your Message" rows="5" required></textarea>
           <button type="submit" className="cta-btn">
-            Send Message
+            Send Booking Request
           </button>
         </form>
       </div>
 
-      {/* Map (optional) */}
+      {/* Map */}
       <div className="map-container">
         <iframe
           title="LodgeLink Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.583123..."
+          src="https://www.google.com/maps/embed?pb=!1m18!..."
           width="100%"
           height="300"
           style={{ border: 0 }}
